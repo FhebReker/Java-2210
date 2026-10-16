@@ -1,6 +1,7 @@
 # CS2210 - Data Structures and Algorithms
 Coursework completed for CS2210 at Western University.
-This repository contains four major assignments that progressively develop skills in algorithm analysis, hash tables, binary search trees, graph theory, recursion, game AI, pathfinding, and custom Abstract Data Type (ADT) implementation.
+This repository contains four major assignments that progressively develop skills in algorithm analysis, custom data structure implementation, graph traversal, recursion, state-space search, and Abstract Data Type (ADT) design. The focus of these projects is on implementing core data structures and algorithms from scratch rather than relying on built-in library implementations.
+
 
 ## Technologies
 - Java
@@ -13,8 +14,6 @@ This repository contains four major assignments that progressively develop skill
 - Recursion
 - Depth-First Search (DFS)
 - Backtracking
-- Alpha-Beta Pruning
-- Memoization
 - Java Swing
 - File I/O
 - Custom Data Structures
@@ -22,16 +21,16 @@ This repository contains four major assignments that progressively develop skill
 
 
 ## Assignment 1: Worst-Case Search Analysis
-A companion programming component for a written assignment focused on analyzing algorithm efficiency and Big O complexity. The project implements several search algorithms with dramatically different worst-case running times and uses empirical benchmarking to compare theoretical and observed performance.
+A programming component accompanying a written assignment on algorithm analysis and Big O complexity. The implementation was used to experimentally evaluate how different complexity classes behave under worst-case conditions.
 
-### Features
-- Linear Search implementation
-- Quadratic Search implementation
-- Factorial Search implementation
-- Worst-case input generation
-- Runtime benchmarking using large datasets
-- Empirical performance measurements
-- Complexity growth comparison
+### My Contributions
+- Implemented Linear Search, O(n)
+- Implemented Quadratic Search, O(n²)
+- Implemented Factorial Search, O(n!)
+- Generated worst-case test inputs
+- Benchmarked algorithm runtime using large datasets
+- Collected empirical performance measurements
+- Compared theoretical and observed complexity growth
 
 ### Skills Demonstrated
 - Big O Analysis
@@ -39,7 +38,7 @@ A companion programming component for a written assignment focused on analyzing 
 - Algorithm Benchmarking
 - Worst-Case Analysis
 - Experimental Performance Testing
-- Recursion
+- Recursive Algorithms
 - Algorithm Design
 
 ### Key Concepts Explored
@@ -48,7 +47,7 @@ A companion programming component for a written assignment focused on analyzing 
 - O(n!) Factorial Complexity
 - Scalability Analysis
 - Growth Rate Comparison
-- Theoretical vs. Observed Performance
+- Theoretical vs. Practical Performance
 
 ### Core Files
 - `Search.java`
@@ -56,56 +55,56 @@ A companion programming component for a written assignment focused on analyzing 
 
 
 ## Assignment 2: Bored Game
-A board-game AI project that combines custom hash tables, memoization, game-tree search, and alpha-beta pruning to create an intelligent computer opponent.
+Implemented the core game-state management and board-storage infrastructure for a board-game AI. My work focused on designing the board ADT, implementing a custom hash-table dictionary, and developing the board evaluation system used for game-state analysis.
 
-### Features
-- Board state representation
-- Custom hash dictionary implementation
-- Separate chaining collision handling
-- Board-state caching
-- Recursive game-tree search
-- Alpha-beta pruning
-- Minimax-style decision making
-- Swing-based graphical interface
-- Automated testing framework
+### My Contributions
+- Designed and implemented the Board ADT
+- Developed board-state storage and retrieval functionality
+- Implemented board-layout serialization
+- Built win-condition detection algorithms
+- Implemented draw-state evaluation logic
+- Created a custom hash-table dictionary
+- Implemented separate chaining collision resolution
+- Developed polynomial hashing for board-state indexing
+- Implemented dictionary insertion, lookup, and deletion operations
+- Created data classes used to store board layouts and evaluation scores
+- Implemented custom exception handling for dictionary operations
 
 ### Skills Demonstrated
 - Hash Tables
 - Separate Chaining
-- Memoization
-- Game Tree Search
-- Alpha-Beta Pruning
-- Recursion
-- State-Space Search
-- ADT Design
+- Polynomial Hashing
+- Custom ADT Design
+- Data Structure Implementation
+- Board-State Evaluation
 - Object-Oriented Programming
+- Exception Handling
 - Software Testing
 
 ### Core Files
 - `Board.java`
 - `HashDictionary.java`
 - `Layout.java`
-- `PlayGame.java`
-- `PosPlay.java`
-- `TestDict.java`
+- `DictionaryException.java`
 
+---
 
 ## Assignment 4: Multimedia Dictionary
-A multimedia dictionary application built on a custom Binary Search Tree implementation that supports ordered dictionary operations and multimedia content retrieval.
+Implemented an ordered dictionary using a Binary Search Tree (BST) to efficiently store and manage multimedia records. My work focused on designing the BST, implementing ordered dictionary operations, and developing the command-processing functionality used by the application.
 
-### Features
-- Binary Search Tree implementation
-- Ordered dictionary ADT
-- Insertion and deletion operations
-- Successor and predecessor retrieval
-- Smallest and largest key lookup
-- Multimedia storage system
-- Audio playback support
-- Image viewing support
-- HTML document rendering
-- Interactive command-based interface
-- File-based dictionary loading
-- Automated BST testing suite
+### My Contributions
+- Implemented a Binary Search Tree from scratch
+- Designed BST node structures and tree organization logic
+- Implemented insertion, search, and deletion operations
+- Developed successor and predecessor retrieval algorithms
+- Implemented smallest and largest key retrieval operations
+- Created multimedia data storage structures
+- Designed dictionary entry and multimedia record models
+- Implemented ordered dictionary functionality
+- Developed command-processing logic for dictionary queries
+- Built file-loading and data-parsing functionality
+- Implemented support for multiple multimedia entries per key
+- Developed custom exception handling for dictionary operations
 
 ### Skills Demonstrated
 - Binary Search Trees
@@ -115,8 +114,7 @@ A multimedia dictionary application built on a custom Binary Search Tree impleme
 - Data Modeling
 - File Processing
 - Command-Line Interfaces
-- Multimedia Integration
-- Swing GUI Development
+- Object-Oriented Design
 - Software Testing
 
 ### Core Files
@@ -125,49 +123,46 @@ A multimedia dictionary application built on a custom Binary Search Tree impleme
 - `Data.java`
 - `MultimediaItem.java`
 - `Query.java`
-- `PictureViewer.java`
-- `SoundPlayer.java`
-- `ShowHTML.java`
-- `TestDict.java`
+- `DictionaryException.java`
+- `MultimediaException.java`
 
 
 ## Assignment 5: Labyrinth Escape
-A graph-based pathfinding application that models labyrinths as undirected graphs and uses depth-first search with recursive backtracking to find valid escape routes under resource constraints.
+Implemented a graph-based labyrinth solver that models maze layouts as undirected graphs and uses recursive depth-first search with backtracking to find valid escape paths while managing limited traversal resources.
 
-### Features
-- Custom graph implementation
-- Adjacency-list representation
-- Graph construction from labyrinth files
-- Node and edge abstractions
-- Depth-First Search (DFS)
-- Recursive backtracking
-- Bomb-limited pathfinding
-- Resource-aware traversal
-- Maze visualization
-- Graph testing framework
-- Real-time solution rendering
+### My Contributions
+- Designed and implemented an Undirected Graph ADT
+- Built an adjacency-list graph representation
+- Created custom Node and Edge classes
+- Implemented graph construction from labyrinth input files
+- Developed graph edge insertion and adjacency operations
+- Implemented graph traversal and incident-edge retrieval methods
+- Built custom graph exception handling
+- Developed a recursive Depth-First Search (DFS) pathfinding algorithm
+- Implemented recursive backtracking and state restoration
+- Designed resource-constrained traversal logic
+- Added support for multiple obstacle and wall types
+- Built graph testing and validation utilities
 
 ### Skills Demonstrated
 - Graph Theory
 - Graph ADTs
 - Adjacency Lists
-- Depth-First Search
-- Backtracking
-- Recursive Algorithms
-- Pathfinding
+- Depth-First Search (DFS)
+- Recursive Backtracking
+- Pathfinding Algorithms
 - State Management
 - Algorithm Design
 - Data Structure Testing
+- Object-Oriented Programming
 
 ### Core Files
 - `UndirectedGraph.java`
 - `Node.java`
 - `Edge.java`
 - `Solve.java`
-- `DrawLab.java`
-- `Lab.java`
-- `TestGraph.java`
-
+- `GraphException.java`
+- `LabyrinthException.java`
 
 
 # Key Learning Outcomes
@@ -175,31 +170,27 @@ Throughout these assignments I gained experience with:
 - Algorithm Analysis and Benchmarking
 - Big O Complexity Evaluation
 - Abstract Data Type (ADT) Design
-- Custom Hash Table Implementation
-- Collision Resolution Strategies
+- Custom Data Structure Implementation
+- Hash Tables and Collision Resolution
 - Binary Search Trees
 - Ordered Dictionaries
 - Graph Data Structures
 - Depth-First Search (DFS)
 - Recursive Backtracking
-- Memoization Techniques
-- Alpha-Beta Pruning
 - State-Space Search
-- Object-Oriented Software Development
 - File Processing
-- GUI Development with Java Swing
+- Object-Oriented Software Development
 - Software Testing and Debugging
 - Technical Documentation
 
 ## Data Structures Implemented
 - Hash Tables
-- Separate Chaining Dictionaries
+- Separate-Chaining Dictionaries
 - Binary Search Trees
 - Ordered Dictionaries
 - Graphs
 - Adjacency Lists
-- Stacks
-- Tree-Based Collections
+- Tree-Based Data Structures
 - Custom Search Structures
 
 ## Algorithms Implemented
@@ -208,21 +199,21 @@ Throughout these assignments I gained experience with:
 - Factorial Search
 - Depth-First Search (DFS)
 - Recursive Backtracking
-- Alpha-Beta Pruning
-- Minimax-Style Game Search
 - Graph Traversal
-- Hash-Based Memoization
-- Successor/Predecessor Tree Operations
+- Hash-Based State Lookup
+- Successor and Predecessor Tree Operations
+- Board-State Evaluation Algorithms
+- Worst-Case Runtime Benchmarking
 
 ## Future Improvements
 Potential future enhancements include:
-- Breadth-First Search (BFS) implementations
+- Breadth-First Search (BFS)
 - Shortest Path Algorithms (Dijkstra's, A*)
 - Balanced Search Trees (AVL Trees, Red-Black Trees)
 - Priority Queues and Heaps
-- More Advanced Graph Algorithms
-- Improved AI Evaluation Heuristics
-- JUnit Testing Integration
+- Additional Graph Algorithms
+- Improved Game AI Evaluation Heuristics
+- JUnit Test Suites
 - JavaFX User Interfaces
 - Persistent Storage Systems
 - Database Integration
