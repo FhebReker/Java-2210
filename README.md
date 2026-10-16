@@ -21,26 +21,34 @@ This repository contains four major assignments that progressively develop skill
 - Exception Handling
 
 
-## Assignment 1: Searches in Worst Case
-An algorithm analysis project that compares search algorithms with significantly different time complexities and experimentally measures their running times under worst-case conditions.
+## Assignment 1: Worst-Case Search Analysis
+A companion programming component for a written assignment focused on analyzing algorithm efficiency and Big O complexity. The project implements several search algorithms with dramatically different worst-case running times and uses empirical benchmarking to compare theoretical and observed performance.
 
 ### Features
 - Linear Search implementation
 - Quadratic Search implementation
 - Factorial Search implementation
-- Runtime benchmarking
 - Worst-case input generation
-- Complexity growth analysis
-- Experimental performance comparison
+- Runtime benchmarking using large datasets
+- Empirical performance measurements
+- Complexity growth comparison
 
 ### Skills Demonstrated
 - Big O Analysis
+- Time Complexity Evaluation
 - Algorithm Benchmarking
-- Complexity Analysis
-- Experimental Evaluation
-- Recursive Algorithms
-- Performance Measurement
+- Worst-Case Analysis
+- Experimental Performance Testing
+- Recursion
 - Algorithm Design
+
+### Key Concepts Explored
+- O(n) Linear Complexity
+- O(n²) Quadratic Complexity
+- O(n!) Factorial Complexity
+- Scalability Analysis
+- Growth Rate Comparison
+- Theoretical vs. Observed Performance
 
 ### Core Files
 - `Search.java`
