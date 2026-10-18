@@ -2,7 +2,6 @@
 Coursework completed for CS2210 at Western University.
 This repository contains four major assignments that progressively develop skills in algorithm analysis, custom data structure implementation, graph traversal, recursion, state-space search, and Abstract Data Type (ADT) design. The focus of these projects is on implementing core data structures and algorithms from scratch rather than relying on built-in library implementations.
 
-
 ## Technologies
 - Java
 - Object-Oriented Programming (OOP)
